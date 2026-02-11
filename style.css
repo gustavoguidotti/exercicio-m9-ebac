@@ -1,0 +1,210 @@
+/* !!! FEITO POR IA !!! */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===== MODO CLARO (PADRÃO) ===== */
+
+body {
+    background: linear-gradient(180deg, #f8fafc, #eef2ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card */
+main {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 36px;
+    border-radius: 18px;
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.06),
+        0 4px 10px rgba(15, 23, 42, 0.04);
+    transition: 0.3s ease;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+/* Labels */
+label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Inputs */
+input {
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    font-size: 14px;
+    color: #0f172a;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6366f1;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* Botão principal */
+form button {
+    margin-top: 8px;
+    padding: 13px;
+    border-radius: 12px;
+    border: none;
+    background: #6366f1;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+form button:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(99, 102, 241, 0.25);
+}
+
+/* Botão secundário */
+main>button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+}
+
+main>button:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* Lista */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    background: #f8fafc;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    transition: 0.2s ease;
+}
+
+li:hover {
+    border-color: #c7d2fe;
+    background: #eef2ff;
+}
+
+/* Botão remover */
+li button {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+li button:hover {
+    color: #dc2626;
+    transform: scale(1.15);
+}
+
+
+/* ===== 🌙 MODO NOTURNO ===== */
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: linear-gradient(180deg, #0f172a, #1e293b);
+    }
+
+    main {
+        background: #1e293b;
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.4),
+            0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+        color: #94a3b8;
+    }
+
+    input {
+        background-color: #0f172a;
+        border: 1px solid #334155;
+        color: #f1f5f9;
+    }
+
+    input:focus {
+        background-color: #1e293b;
+        border-color: #818cf8;
+        box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.15);
+    }
+
+    main>button {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #e2e8f0;
+    }
+
+    main>button:hover {
+        background: #334155;
+    }
+
+    li {
+        background: #0f172a;
+        border: 1px solid #334155;
+        color: #e2e8f0;
+    }
+
+    li:hover {
+        background: #1e293b;
+        border-color: #6366f1;
+    }
+
+    li button {
+        color: #f87171;
+    }
+
+    li button:hover {
+        color: #ef4444;
+    }
+}
