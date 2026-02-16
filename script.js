@@ -6,7 +6,7 @@ const senhaInput = getEl('senha');
 const listaUsuarios = getEl('listaUsuarios');
 
 // Cadastra usuario ao clicar no botao cadastrar
-document.getElementById('cadastrar').addEventListener('click', () => {
+document.getEl('cadastrar').addEventListener('click', () => {
     if (!(nomeInput.value && emailInput.value && senhaInput.value)) return;
 
     const usuario = {
