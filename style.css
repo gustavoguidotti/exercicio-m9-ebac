@@ -147,6 +147,11 @@ li button:hover {
     transform: scale(1.15);
 }
 
+#listaUsuarios li {
+    margin-bottom: 10px;
+}
+
+
 
 /* ===== 🌙 MODO NOTURNO ===== */
 

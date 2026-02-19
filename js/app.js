@@ -1,4 +1,7 @@
-import { cadastrarUsuario, form, getEl, listarUsuarios } from './utils.js';
+import { form, getEl } from './utils.js';
+import { FormUsuario } from './classes.js';
+
+const formUsuario = new FormUsuario();
 
 // "Escuta" o evento submit e cadastra usuario quando ocorre
 form.addEventListener('submit', evt => {
@@ -13,10 +16,10 @@ form.addEventListener('submit', evt => {
         email: email,
         senha: senha,
     };
-    cadastrarUsuario(usuario);
+    formUsuario.cadastrarUsuario(usuario);
     getEl('nome').focus();
     form.reset();
 });
 
 // Lista usuarios cadastrados no CrudCrud
-getEl('listarUsuarios').addEventListener('click', listarUsuarios);
+getEl('listarUsuarios').addEventListener('click', formUsuario.listarUsuarios);
